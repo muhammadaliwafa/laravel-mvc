@@ -20,4 +20,10 @@ class RegisterController extends Controller
         $nama = $request['nama'];
         return $nama;
     }
+    public function greeting(Request $request){
+        $fsname = $request['fsname'];
+        $lsname = $request['lsname'];
+        // dd($request->all());
+        return view('welcome', ['fsname'=>$fsname, 'lsname'=>$lsname]);
+    }
 }
